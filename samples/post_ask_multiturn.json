@@ -1,0 +1,13 @@
+{
+  "question": "Give me two more in the same vein.",
+  "conversation": [
+    {
+      "role": "user",
+      "content": "I want character-driven literary fiction from the last decade."
+    },
+    {
+      "role": "assistant",
+      "content": "Try *A Little Life* (Yanagihara), *Normal People* (Rooney), or *The Goldfinch* (Tartt)—each is character-first, though lengths vary."
+    }
+  ]
+}

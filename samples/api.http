@@ -1,0 +1,49 @@
+### BookInsight — sample HTTP calls (VS Code REST Client / similar)
+### Set @base = http://127.0.0.1:8000/api
+
+@base = http://127.0.0.1:8000/api
+
+### List books
+GET {{base}}/books/
+
+### Chat history (last ~20 rows)
+GET {{base}}/chat-history/
+
+### RAG Q&A (LM Studio must be running on port 1234)
+POST {{base}}/ask/
+Content-Type: application/json
+
+{
+  "question": "What is the Ramayana about?",
+  "conversation": []
+}
+
+### RAG Q&A with short prior conversation (multi-turn)
+POST {{base}}/ask/
+Content-Type: application/json
+
+{
+  "question": "What should I read next in that style?",
+  "conversation": [
+    { "role": "user", "content": "I loved epic myths like the Ramayana." },
+    { "role": "assistant", "content": "Great choice! Are you more interested in Indian epics or world mythology?" }
+  ]
+}
+
+### Recommendations from a text query
+POST {{base}}/recommend/
+Content-Type: application/json
+
+{ "query": "science history bestsellers" }
+
+### Add a book (minimal fields)
+POST {{base}}/add-book/
+Content-Type: application/json
+
+{
+  "title": "Sample Title",
+  "author": "Sample Author",
+  "description": "Short description for vector indexing.",
+  "rating": 4.5,
+  "url": "https://example.com/book"
+}

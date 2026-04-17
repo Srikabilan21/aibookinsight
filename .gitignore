@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.log
+.env
+.env.*
+!.env.example
+
+# Django / local data
+*.sqlite3
+backend/config/db.sqlite3
+backend/config/books/chroma_db/
+
+# Virtual environments
+venv/
+.venv/
+backend/venv/
+
+# Node
+node_modules/
+frontend-react/dist/
+*.local
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+# Ignore secret files
+backend/test_key.py
+.env
