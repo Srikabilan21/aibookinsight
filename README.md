@@ -9,7 +9,7 @@ A full-stack AI-powered web application that allows users to explore books and i
 
 ---
 
-🚀 Features
+## 🚀 Features
 
 - 📊 Sentiment Analysis  
 - 🎭 Genre Classification  
@@ -18,9 +18,9 @@ A full-stack AI-powered web application that allows users to explore books and i
 - 🔎 Related Book Recommendations  
 - 🧠 AI-powered insights  
 
+---
 
-
-🧠 How it works
+## 🧠 How it works
 
 1. User asks a question  
 2. System retrieves relevant book data (ChromaDB)  
@@ -28,8 +28,9 @@ A full-stack AI-powered web application that allows users to explore books and i
 4. Sends combined context to local LLM (LM Studio)  
 5. Returns an intelligent response  
 
+---
 
-🖼️ UI Screenshots
+## 🖼️ UI Screenshots
 
 ![Dashboard](assets/screenshots/dashboardpagefirst.png)
 ![Book Detail](assets/screenshots/viewdetailspage.png)
@@ -37,8 +38,9 @@ A full-stack AI-powered web application that allows users to explore books and i
 ![Chat History](assets/screenshots/chathist.png)
 ![Welcome](assets/screenshots/welcomepage.png)
 
+---
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |------|------------|
@@ -50,18 +52,21 @@ A full-stack AI-powered web application that allows users to explore books and i
 | Automation | Selenium |
 | LLM | LM Studio |
 
+---
 
-⚙️ Setup Instructions
-🔹 Prerequisites
+## ⚙️ Setup Instructions
+
+### 🔹 Prerequisites
 
 - Python 3.10+
 - Node.js 20+
 - LM Studio (running on `http://127.0.0.1:1234`)
 
+---
 
+### 🔹 Backend Setup
 
-🔹 Backend Setup
-
+```bash
 cd backend
 python -m venv venv
 venv\Scripts\activate
@@ -69,27 +74,27 @@ pip install -r requirements.txt
 cd config
 python manage.py migrate
 python manage.py runserver
-
+```
 Backend URL:
 http://127.0.0.1:8000/api
 
-
-🔹 Frontend Setup
+#### 🔹 Frontend Setup
+```bash
 cd frontend-react
 npm install
 npm run dev
-
+```
 Frontend URL:
 http://localhost:5173
 
-🔹 LM Studio Setup
+#### 🔹 LM Studio Setup
 Open LM Studio
 Download a chat model (e.g., Llama 3)
 Start server at:
 http://127.0.0.1:1234
 
 
-🔌 API Documentation
+#### 🔌 API Documentation
 📚 Books
 Method	Endpoint	Description
 GET	/books/	Get all books
@@ -99,7 +104,7 @@ GET	/books/<id>/related/	Related books
 GET	/summary/<id>/	Book summary
 
 
-💬 Q&A (RAG)
+### 💬 Q&A (RAG)
 Method	Endpoint
 POST	/ask/
 GET	/chat-history/
@@ -110,7 +115,7 @@ Sample Request
 }
 
 
-🧠 AI Features
+### 🧠 AI Features
 Endpoint	Description
 /recommend/	Book recommendations
 /sentiment/	Sentiment analysis
@@ -118,7 +123,7 @@ Endpoint	Description
 /analyze/	AI-based analysis
 
 
-💡 Sample Questions & Answers
+### 💡 Sample Questions & Answers
 
 Q1: What is the Ramayana about?
 A: A concise explanation of its story, themes, and characters.
@@ -130,7 +135,7 @@ Q3: Recommend short fiction books
 A: Provides a list of short novels under 300 pages.
 
 
-🧪 Testing Samples
+### 🧪 Testing Samples
 
 Check the samples/ folder for:
 
@@ -138,12 +143,12 @@ API request examples
 JSON payloads for testing
 
 
-📦 Requirements
+### 📦 Requirements
 
 All dependencies are listed in:
 backend/requirements.txt
 
-📂 Project Structure
+### 📂 Project Structure
 aibookinsight/
 ├── backend/
 ├── frontend-react/
@@ -151,10 +156,10 @@ aibookinsight/
 ├── samples/
 └── README.md
 
-🔐 Security Note
+### 🔐 Security Note
 Sensitive data like API keys are stored in .env and are not committed.
 
-🔮 Future Improvements
+### 🔮 Future Improvements
 -Add user authentication
 -Improve UI/UX animations
 -Deploy to cloud (Render/Vercel)
