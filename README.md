@@ -32,11 +32,10 @@ A full-stack AI-powered web application that allows users to explore books and i
 
 ## 🖼️ UI Screenshots
 
-> Add your screenshots inside `assets/screenshots/`
-
 ![Dashboard](assets/screenshots/dashboardpagefirst.png)
 ![Book Detail](assets/screenshots/viewdetailspage.png)
 ![Q&A Chat](assets/screenshots/qa.png)
+![Chat History](assets/screenshots/chathist.png)
 ![Welcome](assets/screenshots/welcomepage.png)
 
 ---
@@ -75,6 +74,7 @@ pip install -r requirements.txt
 cd config
 python manage.py migrate
 python manage.py runserver
+
 Backend URL:
 http://127.0.0.1:8000/api
 
@@ -82,17 +82,15 @@ http://127.0.0.1:8000/api
 cd frontend-react
 npm install
 npm run dev
+
 Frontend URL:
 http://localhost:5173
-
 
 🔹 LM Studio Setup
 Open LM Studio
 Download a chat model (e.g., Llama 3)
 Start server at:
 http://127.0.0.1:1234
-
-
 🔌 API Documentation
 📚 Books
 Method	Endpoint	Description
@@ -101,29 +99,23 @@ GET	/books/<id>/	Get book details
 POST	/add-book/	Add a book
 GET	/books/<id>/related/	Related books
 GET	/summary/<id>/	Book summary
-
-
 💬 Q&A (RAG)
 Method	Endpoint
 POST	/ask/
 GET	/chat-history/
-
-
 Sample Request
 {
   "question": "What is the theme of this book?",
   "conversation": []
 }
-
 🧠 AI Features
 Endpoint	Description
 /recommend/	Book recommendations
 /sentiment/	Sentiment analysis
 /genre/	Genre classification
 /analyze/	AI-based analysis
-
-
 💡 Sample Questions & Answers
+
 Q1: What is the Ramayana about?
 A: A concise explanation of its story, themes, and characters.
 
@@ -136,14 +128,14 @@ A: Provides a list of short novels under 300 pages.
 🧪 Testing Samples
 
 Check the samples/ folder for:
--API request examples
--JSON payloads for testing
 
+API request examples
+JSON payloads for testing
 📦 Requirements
 
 All dependencies are listed in:
-backend/requirements.txt
 
+backend/requirements.txt
 📂 Project Structure
 aibookinsight/
 ├── backend/
@@ -151,11 +143,11 @@ aibookinsight/
 ├── assets/screenshots/
 ├── samples/
 └── README.md
-
 🔐 Security Note
-Sensitive data like API keys are stored in .env and are not committed.  
+
+Sensitive data like API keys are stored in .env and are not committed.
 
 🔮 Future Improvements
--Add user authentication
--Improve UI/UX animations
--Deploy to cloud (Render/Vercel)
+Add user authentication
+Improve UI/UX animations
+Deploy to cloud (Render/Vercel)
