@@ -9,7 +9,7 @@ A full-stack AI-powered web application that allows users to explore books and i
 
 ---
 
- 🚀 Features
+🚀 Features
 
 - 📊 Sentiment Analysis  
 - 🎭 Genre Classification  
@@ -20,14 +20,13 @@ A full-stack AI-powered web application that allows users to explore books and i
 
 
 
- 🧠 How it works
+🧠 How it works
 
 1. User asks a question  
 2. System retrieves relevant book data (ChromaDB)  
 3. Fetches additional context (Google Books + Open Library)  
 4. Sends combined context to local LLM (LM Studio)  
 5. Returns an intelligent response  
-
 
 
 🖼️ UI Screenshots
@@ -39,7 +38,7 @@ A full-stack AI-powered web application that allows users to explore books and i
 ![Welcome](assets/screenshots/welcomepage.png)
 
 
- 🛠️ Tech Stack
+🛠️ Tech Stack
 
 | Layer | Technology |
 |------|------------|
@@ -52,8 +51,7 @@ A full-stack AI-powered web application that allows users to explore books and i
 | LLM | LM Studio |
 
 
- ⚙️ Setup Instructions
-
+⚙️ Setup Instructions
 🔹 Prerequisites
 
 - Python 3.10+
@@ -62,9 +60,8 @@ A full-stack AI-powered web application that allows users to explore books and i
 
 
 
- 🔹 Backend Setup
+🔹 Backend Setup
 
-```bash
 cd backend
 python -m venv venv
 venv\Scripts\activate
