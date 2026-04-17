@@ -7,11 +7,6 @@
 
 A full-stack AI-powered web application that allows users to explore books and interact with an intelligent assistant.
 
-BookInsight combines:
-- 📦 Local vector search (ChromaDB + sentence-transformers)
-- 🌐 External sources (Google Books + Open Library)
-- 🤖 Local LLM (via LM Studio)
-
 ---
 
 ## 🚀 Features
@@ -30,8 +25,8 @@ BookInsight combines:
 1. User asks a question  
 2. System retrieves relevant book data (ChromaDB)  
 3. Fetches additional context (Google Books + Open Library)  
-4. Combines all context and sends to local LLM (LM Studio)  
-5. Returns a grounded, intelligent response  
+4. Sends combined context to local LLM (LM Studio)  
+5. Returns an intelligent response  
 
 ---
 
@@ -39,10 +34,10 @@ BookInsight combines:
 
 > Add your screenshots inside `assets/screenshots/`
 
-![Dashboard](assets/screenshots/01-dashboard.png)
-![Book Detail](assets/screenshots/02-book-detail.png)
-![Q&A Chat](assets/screenshots/03-qa-chat.png)
-![Optional](assets/screenshots/04-optional-loading-or-error.png)
+![Dashboard](assets/screenshots/dashboardpagefirst.png)
+![Book Detail](assets/screenshots/viewdetailspage.png)
+![Q&A Chat](assets/screenshots/qa.png)
+![Welcome](assets/screenshots/welcomepage.png)
 
 ---
 
@@ -56,7 +51,7 @@ BookInsight combines:
 | Embeddings | sentence-transformers |
 | Frontend | React + Vite + Tailwind CSS |
 | Automation | Selenium |
-| LLM | LM Studio (OpenAI-compatible API) |
+| LLM | LM Studio |
 
 ---
 
@@ -80,23 +75,24 @@ pip install -r requirements.txt
 cd config
 python manage.py migrate
 python manage.py runserver
-
-Backend runs at:
-
+Backend URL:
 http://127.0.0.1:8000/api
+
 🔹 Frontend Setup
 cd frontend-react
 npm install
 npm run dev
-
-Frontend runs at:
-
+Frontend URL:
 http://localhost:5173
+
+
 🔹 LM Studio Setup
 Open LM Studio
 Download a chat model (e.g., Llama 3)
-Start local server at:
+Start server at:
 http://127.0.0.1:1234
+
+
 🔌 API Documentation
 📚 Books
 Method	Endpoint	Description
@@ -105,35 +101,49 @@ GET	/books/<id>/	Get book details
 POST	/add-book/	Add a book
 GET	/books/<id>/related/	Related books
 GET	/summary/<id>/	Book summary
+
+
 💬 Q&A (RAG)
 Method	Endpoint
 POST	/ask/
 GET	/chat-history/
-Sample Request:
+
+
+Sample Request
 {
   "question": "What is the theme of this book?",
   "conversation": []
 }
+
 🧠 AI Features
 Endpoint	Description
 /recommend/	Book recommendations
 /sentiment/	Sentiment analysis
 /genre/	Genre classification
 /analyze/	AI-based analysis
-💡 Sample Q&A
 
-Q: What is the Ramayana about?
-A: A concise explanation of its themes, characters, and story.
 
-Q: Recommend books like Sapiens
+💡 Sample Questions & Answers
+Q1: What is the Ramayana about?
+A: A concise explanation of its story, themes, and characters.
+
+Q2: Recommend books like Sapiens
 A: Suggests similar historical and idea-based books.
+
+Q3: Recommend short fiction books
+A: Provides a list of short novels under 300 pages.
 
 🧪 Testing Samples
 
 Check the samples/ folder for:
+-API request examples
+-JSON payloads for testing
 
-API request examples
-JSON test payloads
+📦 Requirements
+
+All dependencies are listed in:
+backend/requirements.txt
+
 📂 Project Structure
 aibookinsight/
 ├── backend/
@@ -141,17 +151,11 @@ aibookinsight/
 ├── assets/screenshots/
 ├── samples/
 └── README.md
-📦 Requirements
 
-All dependencies are listed in:
-
-backend/requirements.txt
 🔐 Security Note
+Sensitive data like API keys are stored in .env and are not committed.  
 
-Sensitive data like API keys are stored using .env and are not committed to the repository.
-
-## Future Improvements
-- Add user authentication
-- Improve UI animations
-- Deploy to cloud
-
+🔮 Future Improvements
+-Add user authentication
+-Improve UI/UX animations
+-Deploy to cloud (Render/Vercel)
