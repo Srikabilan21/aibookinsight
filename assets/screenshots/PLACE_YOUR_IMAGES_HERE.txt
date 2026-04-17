@@ -1,8 +1,0 @@
-Save 4 UI screenshots in this folder using the exact filenames referenced in README.md:
-
-  01-dashboard.png
-  02-book-detail.png
-  03-qa-chat.png
-  04-optional-loading-or-error.png
-
-Then commit and push to GitHub.
