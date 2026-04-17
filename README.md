@@ -9,7 +9,7 @@ A full-stack AI-powered web application that allows users to explore books and i
 
 ---
 
-## 🚀 Features
+ 🚀 Features
 
 - 📊 Sentiment Analysis  
 - 🎭 Genre Classification  
@@ -18,9 +18,9 @@ A full-stack AI-powered web application that allows users to explore books and i
 - 🔎 Related Book Recommendations  
 - 🧠 AI-powered insights  
 
----
 
-## 🧠 How it works
+
+ 🧠 How it works
 
 1. User asks a question  
 2. System retrieves relevant book data (ChromaDB)  
@@ -28,9 +28,9 @@ A full-stack AI-powered web application that allows users to explore books and i
 4. Sends combined context to local LLM (LM Studio)  
 5. Returns an intelligent response  
 
----
 
-## 🖼️ UI Screenshots
+
+🖼️ UI Screenshots
 
 ![Dashboard](assets/screenshots/dashboardpagefirst.png)
 ![Book Detail](assets/screenshots/viewdetailspage.png)
@@ -38,9 +38,8 @@ A full-stack AI-powered web application that allows users to explore books and i
 ![Chat History](assets/screenshots/chathist.png)
 ![Welcome](assets/screenshots/welcomepage.png)
 
----
 
-## 🛠️ Tech Stack
+ 🛠️ Tech Stack
 
 | Layer | Technology |
 |------|------------|
@@ -52,19 +51,18 @@ A full-stack AI-powered web application that allows users to explore books and i
 | Automation | Selenium |
 | LLM | LM Studio |
 
----
 
-## ⚙️ Setup Instructions
+ ⚙️ Setup Instructions
 
-### 🔹 Prerequisites
+🔹 Prerequisites
 
 - Python 3.10+
 - Node.js 20+
 - LM Studio (running on `http://127.0.0.1:1234`)
 
----
 
-### 🔹 Backend Setup
+
+ 🔹 Backend Setup
 
 ```bash
 cd backend
@@ -77,6 +75,7 @@ python manage.py runserver
 
 Backend URL:
 http://127.0.0.1:8000/api
+
 
 🔹 Frontend Setup
 cd frontend-react
@@ -91,6 +90,8 @@ Open LM Studio
 Download a chat model (e.g., Llama 3)
 Start server at:
 http://127.0.0.1:1234
+
+
 🔌 API Documentation
 📚 Books
 Method	Endpoint	Description
@@ -99,6 +100,8 @@ GET	/books/<id>/	Get book details
 POST	/add-book/	Add a book
 GET	/books/<id>/related/	Related books
 GET	/summary/<id>/	Book summary
+
+
 💬 Q&A (RAG)
 Method	Endpoint
 POST	/ask/
@@ -108,12 +111,16 @@ Sample Request
   "question": "What is the theme of this book?",
   "conversation": []
 }
+
+
 🧠 AI Features
 Endpoint	Description
 /recommend/	Book recommendations
 /sentiment/	Sentiment analysis
 /genre/	Genre classification
 /analyze/	AI-based analysis
+
+
 💡 Sample Questions & Answers
 
 Q1: What is the Ramayana about?
@@ -125,17 +132,20 @@ A: Suggests similar historical and idea-based books.
 Q3: Recommend short fiction books
 A: Provides a list of short novels under 300 pages.
 
+
 🧪 Testing Samples
 
 Check the samples/ folder for:
 
 API request examples
 JSON payloads for testing
+
+
 📦 Requirements
 
 All dependencies are listed in:
-
 backend/requirements.txt
+
 📂 Project Structure
 aibookinsight/
 ├── backend/
@@ -143,11 +153,11 @@ aibookinsight/
 ├── assets/screenshots/
 ├── samples/
 └── README.md
-🔐 Security Note
 
+🔐 Security Note
 Sensitive data like API keys are stored in .env and are not committed.
 
 🔮 Future Improvements
-Add user authentication
-Improve UI/UX animations
-Deploy to cloud (Render/Vercel)
+-Add user authentication
+-Improve UI/UX animations
+-Deploy to cloud (Render/Vercel)
