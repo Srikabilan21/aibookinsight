@@ -150,3 +150,8 @@ backend/requirements.txt
 
 Sensitive data like API keys are stored using .env and are not committed to the repository.
 
+## Future Improvements
+- Add user authentication
+- Improve UI animations
+- Deploy to cloud
+
